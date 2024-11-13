@@ -14,15 +14,24 @@
 <body>
 
   <nav>
-      <a href="index.html">Social Study</a>
-      <ul>
-        <li> <a href="#sobre">Sobre</a></li>
-        <li> <a href="#materias">Disciplinas</a></li>
-        <li> <a href="#contato">Contato</a></li>
-        <li> <a href="provas.html">Provas anteriores</a></li>
-        <li> <a href="login.html">Login</a></li>
-      </ul>
-  </nav>
+    <a href="index.html" class="logo">Social Study</a>
+    <!-- Botão para abrir o menu em telas pequenas -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#materias">Disciplinas</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="provas.html">Provas anteriores</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+  }
+</script>
 
   <header id="topo">
       <h1 class="titulo">Social Study</h1>
@@ -33,7 +42,7 @@
   </header>
 
   <section id="sobre">
-<!-- // A partir do trabalho de conclusão de curso da  -->
+
       <h2>Sobre</h2>
       <p>Nossa equipe desenvolveu um site onde o maior objetivo é auxiliar os estudantes na busca de conteúdo para estudo. </p>
       <a href="#contato" class="botao"> Contate Agora </a>
