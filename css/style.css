@@ -349,3 +349,66 @@ div a {
     padding: 5px 10px 5px 10px;
     border-radius: 20px;
 }
+
+/* Estilo básico para o nav */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+nav .logo {
+    font-size: 2em;
+    text-decoration: none;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    gap: 1em;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Botão do menu */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+    /* Esconder o menu por padrão */
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 1em;
+        position: absolute;
+        top: 60px; /* ajusta conforme necessário */
+        background-color: #201b2c;
+        width: 100%;
+        padding: 1em 0;
+    }
+
+    /* Mostrar o menu quando a classe "active" estiver presente */
+    .menu.active {
+        display: flex;
+    }
+
+    /* Mostrar o botão do menu em telas pequenas */
+    .menu-toggle {
+        display: block;
+    }
+}
