@@ -14,13 +14,17 @@ h1 {
 /*NAVEGAÇÃO*/
 nav {
     font-family: 'Nunito', sans-serif;
-    border-style:solid;
-    border-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    border-bottom-style: solid;
+    font-size: 25px;
+    padding: 0px;
+    padding-left: 20px;
 }
 
 
 nav ul li a {
-    display: inline-table;
+    text-align: center;
+    width: 7em;
 }
 
 /*div*/
@@ -153,3 +157,9 @@ div {
     transition: 0.3s;
 }
 */
+
+@media (max-width: 768px) {
+    nav {
+        margin-top: 20px;
+    }
+}

@@ -90,7 +90,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../img/estudo.jpg");
+    background-image: url("../img/estudo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -173,6 +173,7 @@ header p {
     color: #FFFFFF;
 }
 
+
 #provas a {
     color: #00ff88;
     background-color: #2f2841;
@@ -190,14 +191,28 @@ header p {
     transition: 0.4s;
 }
 
-#provas #ssa div{
-    display: inline-block;
-    margin: 50px;
+#provas #ssa1 div{
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
 }
 
 #provas #ssa2 div{
-    display:inline-block;
-    margin: 50px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+#provas #ssa3 div{
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
 }
 
 /*contato*/
@@ -249,11 +264,12 @@ footer a {
         top: 0;
         flex-direction: row;
         justify-content: space-around;
+        
     }
 
     nav ul {
         flex-direction: row;
-        width: 70%;
+        width: 75%;
     }
 
     /*cabeçalho*/
@@ -272,25 +288,41 @@ footer a {
         min-height: 250px;
     }
 
-    /*materias*/
-    #materias {
-        padding-left: 8.55%;
-        display: inline-block;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    #materias h2 {
+    #materiash2 h2 {
+        color: black;
         width: 100%;
         text-align: center;
-        padding-right: 10%;
     }
 
-    #materias img {
-        border-radius: 30px;
-        border-style:groove;
-        width:  30%;
+    /*materias*/
+    #materias {
+        /* padding-left: 8.55%;
+        display: inline-block;
+        flex-direction: row;
+        flex-wrap: wrap; */
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
     }
+
+    /* apaga qualquer coisa */
+    #materias a{
+        display: block;
+    } 
+
+    #materias img {
+        /* border-radius: 30px;
+        border-style:groove;
+        width:  30%; */
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+    }
+
     /*contato*/
     #contato {
         flex-direction: row;
@@ -390,6 +422,20 @@ nav .logo {
 
 /* Estilos para telas pequenas */
 @media (max-width: 768px) {
+
+    #materiash2 h2 {
+        color: black;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    #materias img {
+        margin-bottom: 20px;
+        width: 25em;
+        border-radius: 1em;
+    }
+
     /* Esconder o menu por padrão */
     .menu {
         display: none;
