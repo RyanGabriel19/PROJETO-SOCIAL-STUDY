@@ -18,7 +18,6 @@ nav {
     border-bottom-style: solid;
     font-size: 25px;
     padding: 0px;
-    padding-left: 20px;
 }
 
 
@@ -161,5 +160,11 @@ div {
 @media (max-width: 768px) {
     nav {
         margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        padding-left: 20px;
     }
 }
